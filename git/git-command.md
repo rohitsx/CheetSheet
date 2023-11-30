@@ -8,32 +8,33 @@
 
 - Flag --short: Gives a concise output to the status.
 
-## Staging environment
-
+### Staging environment
 Staged files are files that are ready to be committed to the repository you are working on. As you work, add, edit, and remove files. Use the staging environment for commits.
 
 **git add (--all/./\*/-A or fileName):** Adds files to the staging environment.
-
 - Flag "--all/./\*/-A" used to select all flies from a directory.
 - Use "fileName" to add the selected file to the staging.
 
-**git commit (-a -m "commit message"):** Commits changes from the staging area to remote repo. Git considers each commit change point or "save point".
 
+**git commit (-a -m "commit message"):** Commits changes from the staging area to remote repo. Git considers each commit change point or "save point".
 - Flag -a used when you want to stage and commit together **although it is not recommended**.
 - Flag -m used to add a commit message. when using -m flags always use double quotes to add a message.
 
+
 **git push (repo url)or(remote name) (brancName):** push you local files to remote repo.
 
-**git remote add/set-url (remote name) (repo url):** Create a remote name and you can always use it in place of URL.
 
+**git remote add/set-url (remote name) (repo url):** Create a remote name and you can always use it in place of URL.
 - The add command will add a new remote name.
 - set-url will update the URL.
 - git remote list all the remote names.
 - git remote remove (remote name).
 
+
 **git log:** List all the commit history. use q to quit the git log.
 
-## Git pull
+
+### Git pull
 
 **git fetch remoteName/repoURL:**use to fetch changes made in the remote repo (at GitHub).
 tip: use "git status" after git fetch to see updates and then merge with your local repo to the remote repo using git merge origin/master.
@@ -42,25 +43,27 @@ tip: use "git status" after git fetch to see updates and then merge with your lo
 
 **git pull:** It is a combination of fetch and merge. It is used to pull all changes from a remote repository into the branch you are working on.
 
-## Git push
+
+### Git push
 
 **git push (remoteName branchName):** Push the local file to the remote directory (GitHub).
-
 - remoteName and branchName is optional.
 
-**git checkout branchName:** to change the branch
 
+**git checkout branchName:** to change the branch
 - **git checkout -b branchName** will create and switch to the new branch.
 
-**git branch branchName:** to create a new branch
 
+**git branch branchName:** to create a new branch
 - **git branch -d branchName:** flag -d used to delete the branch
 - **git branch -a:** flag -a get you all the branches on the remote repo
 - note: when git pull will not fetch all branch
 
 **git merge branchName:** to merge to the branch (you can also merge the remote branch, so can update the local branch from the remote branch)
 
+
 **git rebase branchName:** Git rebase is used to integrate changes from one branch into another by moving or combining commits, creating a linear commit history.
+
 
 difference between git merge and git rebase:
 > Git merge combines changes from different branches by creating a new commit, while Git rebase integrates changes by moving and reapplying commits to a new base, resulting in a linear commit history.
@@ -81,8 +84,9 @@ note: when you create a new branch from **old commit** they are like a temporary
 
 **git branch -f main HEAD~number/branchId(or hash):** This command will change the position of the branch by forcing it to go up.
 
-how to reset old commit or get back to the old version?
 
+how to reset old commit or get back to the old version?
 > **git reset HEAD~number/branchId(or hash):** this reset the commit to the parent commit and the act like current comint never created.
+
 
 **git revert HEAD/bracnhId(or hash):** this create a new commint by the parent branch but it will not remove the current branch like git reset does.
