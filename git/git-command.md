@@ -1,4 +1,4 @@
-### [Visti this site to recall any advanced topic](https://learngitbranching.js.org/) or [visit this site to recall basic topics]
+[Visti this site to recall any advanced topic](https://learngitbranching.js.org/) or [visit this site to recall basic topics]
  (https://www.w3schools.com/git/default.asp?remote=github).
 
 # Git starter
